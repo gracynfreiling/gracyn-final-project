@@ -1,0 +1,27 @@
+{% extends '_templates/base.njk' %}
+{% set relative_path = "../" %}
+{% from '_macros/prose.njk' import prose %}
+
+{% block page_title %}{{ headline }}{% endblock %}
+
+{% block page_description %}{{ headline }} Explore ATX {% endblock %}
+
+{% block content %}
+  <article class="container">
+  {% for landmark in austin.landmarks %}
+    <div class="row">
+        <h1>{{ landmark.name }}</h1>
+    </div>
+    <div>
+      <img src="../img/landmarks/{{ landmark.image }}" alt="{{ landmark.name }}" class="img-fluid">
+      <p>{{ landmark.established }}<br>
+      <span>{{ landmark.location }}</span></p>
+      <p>{{ landmark.description }}</p>
+      <p>{{ landmark.activities }}</p>
+      <hr class="d-sm-none">
+      {{ prose(post) }}
+    </div>
+      
+  {% endfor %}
+  </article>
+{% endblock %}
