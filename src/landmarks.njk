@@ -1,0 +1,24 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Landmarks{% endblock %}
+
+{% block page_description %}Step into the essence of Austin through its landmarks, where the city's stories and cultural significance come to life.{% endblock %}
+
+{% block content %}
+<article class="container">
+  <h1>Landmarks</h1>
+  <p>Step into the essence of Austin through its landmarks, where the city's stories and cultural significance come to life.</p>
+    <div class="row">
+        {% for landmark in austin.landmarks %}
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/landmarks/{{ landmark.image }}" alt="{{ landmark.name }}">
+                <div class="card-body">
+                    <h5 class="card-text">{{ landmark.name }}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</article>
+{% endblock %}

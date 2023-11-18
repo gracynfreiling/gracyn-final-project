@@ -1,13 +1,47 @@
 {% extends '_templates/base.njk' %}
 
-{% block page_title %}Index page title{% endblock %}
+{% block page_title %}Home{% endblock %}
 
-{% block page_description %}The index search description for this page goes here.{% endblock %}
+{% block page_description %}Explore ATX: The Hitchhiker's Guide to Austin, Texas{% endblock %}
 
 {% block content %}
 <div class="container">
-  <h1>Main headline here</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
+  <h1>Austin Awaits! Explore ATX.</h1>
+  <p>Welcome to Explore ATX, your ultimate guide to all things Austin, Texas! From the vibrant live music scene that echoes through the streets to the delectable food joints that define the city's culinary culture, Explore ATX is your key to unlocking the heart and soul of this eclectic metropolis. Dive into a treasure trove of information on must-visit attractions, hidden gems, upcoming events, and insider tips curated by locals. Whether you're seeking the thrill of outdoor adventures along Lady Bird Lake or craving the electric atmosphere of South Congress Avenue, let Explore ATX be your trusted companion on your journey through the soul-stirring sights and sounds of Austin. Come explore with us and uncover the endless wonders this city has to offer!</p>
+  
+  <!--
+  <h2>Featured Attractions</h2>
+  <div class="row">
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+   DELETE ME IF NOT USED!! COPIED FROM STATIC APP FOR REFERENCE
+    <div class="row">
+    {% for ship in pirates.ships %}
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card text-bg-dark mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ ship.ship_name }}</h5>
+          <h6>{{ ship.captain }}</h6>
+          <p class="card-text">{{ ship.blurb }}</p>
+          <a href="{{ ship.source }}" target="_blank">Source</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div> 
+  
+
+  LIBRARY BOOKS LOOP
+
   <h2>Library books loop</h2>
   <p>This loops through data that came from a Google Docs example.</p>
   <div class="row">
@@ -26,5 +60,7 @@
     <p>{{ store.address}}, {{ store.city }}, {{ store.state }} {{ store.zip }}</p>
     <hr>
   {% endfor %}
+  -->
+
 </div>
 {% endblock %}

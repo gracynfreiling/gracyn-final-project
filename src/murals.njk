@@ -1,0 +1,23 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Murals{% endblock %}
+
+{% block page_description %}Discover the colorful soul of Austin through its collection of murals, a vibrant canvas that reflects the city's spirit and imagination.{% endblock %}
+
+{% block content %}
+<article class="container">
+  <h1>Murals</h1>
+  <p>Discover the colorful soul of Austin through its collection of murals, a vibrant canvas that reflects the city's spirit and imagination.</p>
+    <div class="row">
+        {% for mural in austin.murals %}
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-text">{{ mural.name }}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</article>
+{% endblock %}

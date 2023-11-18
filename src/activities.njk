@@ -1,0 +1,23 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Activities{% endblock %}
+
+{% block page_description %}From outdoor enthusiasts to culture seekers, Austin's diverse range of activities promises an unforgettable experience for every visitor.{% endblock %}
+
+{% block content %}
+<article class="container">
+  <h1>Activities</h1>
+  <p>From outdoor enthusiasts to culture seekers, Austin's diverse range of activities promises an unforgettable experience for every visitor.</p>
+    <div class="row">
+        {% for activity in austin.activities %}
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-text">{{ activity.activity }}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</article>
+{% endblock %}
