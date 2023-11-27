@@ -39,7 +39,7 @@
     {
       "name": "The Peached Tortilla",
       "address": "5520 Burnet Rd #100, Austin, TX 78756",
-      "category": "Asian fusion",
+      "category": "Asian Fusion",
       "image": "peached-tortilla.jpg"
     },
     {
@@ -71,6 +71,24 @@
       "address": "2400 E Oltorf St #1A, Austin, TX 78741",
       "category": "Pan-Asian",
       "image": "888.jpg"
+    },
+    {
+      "name": "Odd Duck",
+      "address": "1201 S Lamar Blvd, Austin, TX 78704",
+      "category": "Farm-to-Table",
+      "image": "odd-duck.jpg"
+    },
+    {
+      "name": "Hula Hut",
+      "address": "3825 Lake Austin Blvd, Austin, TX 78703",
+      "category": "Tex-Mex",
+      "image": "hula-hut.jpg"
+    },
+    {
+      "name": "Matt’s El Rancho",
+      "address": "2613 S Lamar Blvd, Austin, TX 78704",
+      "category": "Tex-Mex",
+      "image": "matts-el-rancho.jpg"
     }
   ]
 }

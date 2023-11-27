@@ -9,19 +9,30 @@
   <h1>Murals</h1>
   <p>Discover the colorful soul of Austin through its collection of murals, a vibrant canvas that reflects the city's spirit and imagination.</p>
     <div class="row">
-        {% for mural in austin.murals %}
-        <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-text">{{ mural.name }}</h5>
-                    <p class="card-text">{{ mural.address }}</p>
-                    <p class="card-text">{{ mural.latitude }}</p>
-                    <p class="card-text">{{ mural.longitude }}</p>
-                    <p class="card-text">{{ mural.map_location }}</p>
-                </div>
-            </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Latitude</th>
+                        <th scope="col">Longitude</th>
+                        <th scope="col">Google Maps</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                {% for mural in austin.murals %}
+                    <tr>
+                        <th scope="row">{{ mural.name }}</th>
+                        <td>{{ mural.address }}</td>
+                        <td>{{ mural.latitude }}</td>
+                        <td>{{ mural.longitude }}</td>
+                        <td><a href="{{ mural.map_location }}" target="_blank">Get Directions</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
         </div>
-        {% endfor %}
     </div>
 </article>
 {% endblock %}
