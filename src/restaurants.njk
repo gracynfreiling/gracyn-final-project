@@ -1,0 +1,26 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Restaurants{% endblock %}
+
+{% block page_description %}Needs Description{% endblock %}
+
+{% block content %}
+<article class="container">
+  <h1>Restaurants</h1>
+  <p>Needs Description</p>
+    <div class="row">
+        {% for restaurant in restaurants.restaurants %}
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="img/restaurants/{{ restaurant.image }}" alt="{{ restaurant.name }}">
+                <div class="card-body">
+                    <p><em>{{ restaurant.category }}</em></p>
+                    <h5>{{ restaurant.name }}</h5>
+                    <p>{{ restaurant.address }}</p> 
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</article>
+{% endblock %}

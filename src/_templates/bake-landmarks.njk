@@ -2,26 +2,23 @@
 {% set relative_path = "../" %}
 {% from '_macros/prose.njk' import prose %}
 
-{% block page_title %}{{ headline }}{% endblock %}
+{% block page_title %}{{ name }}{% endblock %}
 
-{% block page_description %}{{ headline }} Explore ATX {% endblock %}
+{% block page_description %} Explore ATX | {{ name }}{% endblock %}
 
 {% block content %}
   <article class="container">
-  {% for landmark in austin.landmarks %}
     <div class="row">
-        <h1>{{ landmark.name }}</h1>
+        <h1>{{ name }}</h1>
     </div>
     <div>
-      <img src="../img/landmarks/{{ landmark.image }}" alt="{{ landmark.name }}" class="img-fluid">
-      <p>{{ landmark.established }}<br>
-      <span>{{ landmark.location }}</span></p>
-      <p>{{ landmark.description }}</p>
-      <p>{{ landmark.activities }}</p>
+      <img src="../img/landmarks/{{ image }}" alt="{{ name }}" class="img-fluid">
+      <p>{{ location }}<br>
+      <span>{{ established }}</span></p>
+      <p>{{ description | safe }}</p>
+      <p>{{ activities }}</p>
       <hr class="d-sm-none">
       {{ prose(post) }}
     </div>
-      
-  {% endfor %}
   </article>
 {% endblock %}
