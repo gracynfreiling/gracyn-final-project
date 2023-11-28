@@ -9,16 +9,36 @@
 {% block content %}
   <article class="container">
     <div class="row">
+      <div class="col-sm-5">
+        <img src="../img/landmarks/{{ image }}" alt="{{ name }}" class="img-fluid">
+      </div>
+      <div class="col-sm-7">
         <h1>{{ name }}</h1>
-    </div>
-    <div>
-      <img src="../img/landmarks/{{ image }}" alt="{{ name }}" class="img-fluid">
-      <p>{{ location }}<br>
-      <span>{{ established }}</span></p>
-      <p>{{ description | safe }}</p>
-      <p>{{ activities }}</p>
-      <hr class="d-sm-none">
-      {{ prose(post) }}
+        <h6>{{ established }}<br>
+        <span>{{ location }}</span></h6>
+        <h6><em>Activities: {{ activities }}</em></h6>
+        <p>{{ description | safe }}</p>
+        <hr class="d-sm-none">
+        {{ prose(post) }}
+      </div>
     </div>
   </article>
 {% endblock %}
+
+<!-- FROM STATIC APP- JUST FOR REFERENCE!! PLS DELETE
+<article class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="../img/pirate.jpg" alt="pirate character" class="img-fluid">
+        <p class="byline">By Crit McGillicutty<br>
+        <span>Island Breeze Tribune</span></p>
+        <hr class="d-sm-none">
+      </div>
+      <div class="col-sm-8">
+        <img src="../img/{{ image }}" alt="" class="img-fluid mb-4">
+        <h1>{{ headline }}</h1>
+        {{ prose(post) }}
+      </div>
+    </div>
+  </article>
+-->
