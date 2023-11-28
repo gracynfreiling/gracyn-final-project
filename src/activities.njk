@@ -9,9 +9,35 @@
   <h1>Activities</h1>
   <p>From outdoor enthusiasts to culture seekers, Austin's diverse range of activities promises an unforgettable experience for every visitor.</p>
     <div class="row">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">What?</th>
+                        <th scope="col">When?</th>
+                        <th scope="col">Where?</th>
+                        <th scope="col">Learn More</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                {% for activity in austin.activities %}
+                    <tr>
+                        <th scope="row">{{ activity.activity }}</th>
+                        <td>{{ activity.date_time }}</td>
+                        <td>{{ activity.address }}</td>
+                        <td><a href="{{ activity.url }}" target="_blank">Learn More</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<!--
+    <div class="row">
         {% for activity in austin.activities %}
         <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
+            <div class="card text-bg-light">
                 <div class="card-body">
                     <h5 class="card-text">{{ activity.activity }}</h5>
                     <p class="card-text"><strong>When:</strong> {{ activity.date_time }}</p>
@@ -22,5 +48,7 @@
         </div>
         {% endfor %}
     </div>
+-->
+
 </article>
 {% endblock %}

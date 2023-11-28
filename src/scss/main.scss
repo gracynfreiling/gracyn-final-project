@@ -36,15 +36,37 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
   z-index: 999; /* Ensure it's above the carousel */
-  /* Additional styles */
+  text-align: center;
+  width: 100%;
+}
+
+.text-overlay .btn {
+  margin-bottom: 10px;
+}
+
+.carousel {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.intro {
+  padding-top: 30px;
+}
+
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the darkness here */
 }
 
 #carouselExampleSlidesOnly {
-  max-width: 1000px; /* Set your desired maximum width */
-  max-height: 500px; /* Set your desired maximum height */
+  max-width: 1300px; /*Set your desired maximum width*/
+  max-height: 500px; /*Set your desired maximum height*/
   margin: 0 auto; /* Center the carousel */
   overflow: hidden; /* Hide the overflow content (to crop) */
 }
@@ -64,4 +86,3 @@ h3 {
   height: 100%; /* Make images fill the carousel items */
   object-fit: cover; /* Crop images to cover the entire area */
 }
-
