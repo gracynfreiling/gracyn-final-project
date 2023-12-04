@@ -17,7 +17,7 @@
         <h6>{{ established }}<br>
         <span>{{ location }}</span></h6>
         <h6><em>Activities: {{ activities }}</em></h6>
-        <p>{{ description | safe }}</p>
+        {{ description | safe }}
         <hr class="d-sm-none">
         {{ prose(post) }}
       </div>
